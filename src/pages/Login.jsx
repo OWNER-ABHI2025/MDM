@@ -68,7 +68,7 @@ const Login = () => {
                 </label>
                 <input
                   className='w-full px-6 py-4 rounded-lg font-semibold bg-gray-50 border border-[#1C6BA0]/20 placeholder-gray-400 text-md focus:outline-none focus:border-[#1C6BA0] focus:bg-white focus:ring-2 focus:ring-[#1C6BA0]/20 transition-all duration-300'
-                  placeholder='Enter username'
+                  placeholder='Username: admin'
                   type='text'
                   value={user}
                   onChange={e => setUser(e.target.value)}
@@ -82,17 +82,17 @@ const Login = () => {
                 <div className='relative'>
                   <input
                     className='w-full px-6 py-4 rounded-lg font-semibold bg-gray-50 border border-[#1C6BA0]/20 placeholder-gray-400 text-md focus:outline-none focus:border-[#1C6BA0] focus:bg-white focus:ring-2 focus:ring-[#1C6BA0]/20 transition-all duration-300'
-                    placeholder='Enter password'
+                    placeholder='Password: admin'
                     type={visibility ? 'text' : 'password'}
                     value={pass}
                     onChange={e => setPass(e.target.value)}
                   />
-                  {/* <div
+                  <div
                     className='absolute right-4 top-1/2 -translate-y-1/2 text-xl cursor-pointer text-[#1C6BA0]/60 hover:text-[#1C6BA0] transition-colors duration-300'
                     onClick={() => setVisibility(!visibility)}
                   >
                     {visibility ? <PiEyeClosed /> : <VscEye />}
-                  </div> */}
+                  </div>
                 </div>
               </div>
 
@@ -128,6 +128,20 @@ const Login = () => {
           <p className='text-sm text-[#1C6BA0] hover:text-[#1C6BA0]/80 transition-colors duration-300 cursor-pointer font-medium'>
             Forgot password?
           </p>
+
+          <div className='mt-8 w-full bg-blue-50 border-2 border-[#1C6BA0]/30 rounded-lg p-4'>
+            <p className='text-xs font-semibold text-[#1C6BA0] mb-3 uppercase tracking-wide'>Demo Credentials:</p>
+            <div className='space-y-2'>
+              <div className='flex items-center justify-between p-3 bg-white rounded border border-[#1C6BA0]/10'>
+                <span className='text-sm font-medium text-gray-600'>Username:</span>
+                <span className='font-bold text-[#1C6BA0] text-sm'>admin</span>
+              </div>
+              <div className='flex items-center justify-between p-3 bg-white rounded border border-[#1C6BA0]/10'>
+                <span className='text-sm font-medium text-gray-600'>Password:</span>
+                <span className='font-bold text-[#1C6BA0] text-sm'>admin</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
